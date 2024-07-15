@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Navbar } from "./Navbar";
+import { Home } from "./Home";
+import { Footer } from "./Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // --> la funcion app la llamamos en el main
+
+  // por encima del return colocamos toda la logica
 
   return (
+    // dentro del return va todo nuestro XML
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar />
+      <Home />
+      <Footer />
     </>
-  )
+
+    /* 
+    para retornar mas de un elemento tenemos que colocarlo dentro de un div,
+    para no tener el problema de tener crear un div por cada componente ponemos <> </>
+    y tambien nos va a permitir retornar varios elementos
+    
+    forma 1:
+
+    return <h1> retornando 1 solo elemento </h1>
+    
+    forma 2:
+
+    return (
+    <div>
+      <h1> retornando este elemento </h1>
+      <p> y este elemento <span> dentro de un div </span> </p>
+    </div>
+    )
+
+    forma 3:
+
+    return(
+    <>
+      <h1> retornando este elemento </h1>
+      <p> y este elemento <span> sin la necesidad de crear div </span> </p>
+    </>
+    )
+    */
+  );
 }
 
-export default App
+export default App;
+
+/*
+Teoria: 
+  . Que es JSX? 
+    Es una tecnologia que nos permite mezclar JavaScript con XML
+  . Que es un componente?
+    Es una funcion que retorna html
+*/

@@ -1,0 +1,10 @@
+.texto_home{
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fafafa;
+    background-color: #0a0a0a;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+}
