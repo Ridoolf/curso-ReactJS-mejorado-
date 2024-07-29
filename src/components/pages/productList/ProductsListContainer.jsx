@@ -1,14 +1,25 @@
 import { useEffect, useState } from "react";
+import { products } from "../../../productsMock";
 import { ProductsList } from "./ProductsList";
 
 export const ProductsListContainer = () => {
-  const [contador, setContador] = useState(0);
-
-  console.log("El componente fue montado");
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
-    console.log("Realizamos la peticion a la API");
+    const tarea = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(products);
+      }, 3000);
+    });
+
+    tarea
+      .then((res) => {
+        setItems(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
-  return <ProductsList contador={contador} setContador={setContador} />;
+  return <ProductsList items={items} />;
 };

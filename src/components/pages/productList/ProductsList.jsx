@@ -1,8 +1,12 @@
-export const ProductsList = ({ contador, setContador }) => {
+import ProductCard from "../../common/card/ProductCard";
+import "./ProductsList.css";
+
+export const ProductsList = ({ items }) => {
   return (
-    <>
-      <h1>Aca van los productos</h1>
-      <button onClick={() => setContador(contador + 1)}>Sumar</button>
-    </>
+    <div className="cards_container">
+      {items.map((item) => {
+        return <ProductCard key={item.id} item={item} />;
+      })}
+    </div>
   );
 };
