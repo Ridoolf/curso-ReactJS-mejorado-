@@ -1,8 +1,11 @@
 import { Navbar } from "./components/layout/navbar/Navbar";
-import { ProductsListContainer } from "./components/pages/productList/ProductsListContainer";
+// import { ProductsListContainer } from "./components/pages/productList/ProductsListContainer";
 import "./App.css";
 import "@fontsource/roboto/300.css";
-import { ProductDetailContainer } from "./components/pages/productDetail/ProductDetailContainer";
+import { Users } from "./components/Users";
+import { Comments } from "./components/Comments";
+import { Post } from "./components/Post";
+// import { ProductDetailContainer } from "./components/pages/productDetail/ProductDetailContainer";
 
 function App() {
   return (
@@ -10,8 +13,11 @@ function App() {
       <header>
         <Navbar />
       </header>
-      <ProductsListContainer />
-      <ProductDetailContainer />
+      {/* <ProductsListContainer />
+      <ProductDetailContainer /> */}
+      <Users />
+      <Comments />
+      <Post />
     </div>
   );
 }
