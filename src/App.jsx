@@ -10,7 +10,7 @@ function App() {
       <header>
         <Navbar />
       </header>
-      {/* <ProductsListContainer /> */}
+      <ProductsListContainer />
       <ProductDetailContainer />
     </div>
   );

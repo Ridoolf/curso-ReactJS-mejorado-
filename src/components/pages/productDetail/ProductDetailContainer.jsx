@@ -21,11 +21,3 @@ export const ProductDetailContainer = () => {
 
   return <ProductDetail productSelected={productSelected} />;
 };
-
-/* status codes: 
-  . Todos los status code 200, 201, 204, etc son estados de exito
-  . Todos los status code entre 400 y 500 son errores en la comunicacion entre front y back
-    . Status code 400: El error proviene del cliente (front-end)
-    . Status code 500: El error proviene del servidor (back-end)
-  . Todos los status code 300 son redirecciones
-*/
