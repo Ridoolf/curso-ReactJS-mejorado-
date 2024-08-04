@@ -1,8 +1,7 @@
 import { Navbar } from "./components/layout/navbar/Navbar";
-import { ProductsListContainer } from "./components/pages/productList/ProductsListContainer";
 import "./App.css";
 import "@fontsource/roboto/300.css";
-import { ProductDetailContainer } from "./components/pages/productDetail/ProductDetailContainer";
+import { Fetching } from "./components/pages/fetching/Fetching";
 
 function App() {
   return (
@@ -10,8 +9,7 @@ function App() {
       <header>
         <Navbar />
       </header>
-      {/* <ProductsListContainer /> */}
-      <ProductDetailContainer />
+      <Fetching />
     </div>
   );
 }
