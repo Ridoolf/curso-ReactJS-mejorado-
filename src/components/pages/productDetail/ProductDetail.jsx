@@ -1,4 +1,4 @@
-import { ItemCount } from "../../ItemCount";
+import { ItemCount } from "../../common/counter/ItemCount";
 
 export const ProductDetail = ({ productSelected }) => {
   const onAdd = (cantidad) => {

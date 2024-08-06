@@ -1,4 +1,4 @@
-import { useCount } from "./hooks/useCount";
+import { useCount } from "../../hooks/useCount";
 
 export const ItemCount = ({ initial, stock, onAdd }) => {
   const { count, decrement, increment } = useCount(initial, stock);
