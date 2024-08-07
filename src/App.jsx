@@ -19,7 +19,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<h1>Este es el home</h1>} />
           <Route path="/productList" element={<ProductsListContainer />} />
-          <Route path="/itemDetail" element={<ProductDetailContainer />} />
+          <Route path="/itemDetail/:id" element={<ProductDetailContainer />} />
           <Route path="*" element={<h1>Lo siento, la ruta no existe</h1>} />
         </Route>
       </Routes>

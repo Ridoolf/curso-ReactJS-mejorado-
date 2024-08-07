@@ -11,7 +11,7 @@ export const products = [
     },
     {
         id: 2,
-        title: "zapatillas nike airMax",
+        title: "Remera negra",
         description: "estas son las mejores airMax del mercado papaa",
         price: 1000,
         stock: 9,
@@ -20,7 +20,7 @@ export const products = [
     },
     {
         id: 3,
-        title: "zapatillas nike airMax",
+        title: "zapatillas jordan",
         description: "estas son las mejores airMax del mercado papaa",
         price: 1000,
         stock: 9,
@@ -29,7 +29,7 @@ export const products = [
     },
     {
         id: 4,
-        title: "zapatillas nike airMax",
+        title: "pantalon adidas",
         description: "estas son las mejores airMax del mercado papaa",
         price: 1000,
         stock: 9,
@@ -38,7 +38,7 @@ export const products = [
     },
     {
         id: 5,
-        title: "zapatillas nike airMax",
+        title: "botines nike phantom",
         description: "estas son las mejores airMax del mercado papaa",
         price: 1000,
         stock: 9,
@@ -47,7 +47,7 @@ export const products = [
     },
     {
         id: 6,
-        title: "zapatillas nike airMax",
+        title: "Nike air uptempo",
         description: "estas son las mejores airMax del mercado papaa",
         price: 1000,
         stock: 9,

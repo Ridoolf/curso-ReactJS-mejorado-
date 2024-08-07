@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Tienda");
@@ -34,14 +35,16 @@ export const Navbar = () => {
           >
             Inicio
           </li>
-          <li
-            className={`nav_lista_item ${
-              activeItem === "Tienda" ? "actual" : ""
-            }`}
-            onClick={() => handleItemClick("Tienda")}
-          >
-            Tienda
-          </li>
+          <Link to={"/productList"}>
+            <li
+              className={`nav_lista_item ${
+                activeItem === "Tienda" ? "actual" : ""
+              }`}
+              onClick={() => handleItemClick("Tienda")}
+            >
+              Tienda
+            </li>
+          </Link>
           <li
             className={`nav_lista_item ${
               activeItem === "Sucursales" ? "actual" : ""
@@ -74,4 +77,14 @@ export const Navbar = () => {
   );
 };
 
-// En vez de renderizar los childrens, se renderiza el Outlet (cumple la misma funcion)
+/* Outlet:
+
+  En vez de renderizar los childrens, se renderiza el Outlet (cumple la misma funcion)
+*/
+
+/* Link:
+
+Cumple una funcion similar a la etiqueta href de html, pero la misma no se utiliza en react ya que
+refresca la pagina... Cuando utilizamos rutas, tenemos que importar los links de react router
+
+*/
