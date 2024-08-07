@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export const Navbar = ({ children }) => {
+export const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Tienda");
 
   const handleItemClick = (item) => {
@@ -70,7 +70,8 @@ export const Navbar = ({ children }) => {
           </li>
         </ul>
       </nav>
-      {children}
     </>
   );
 };
+
+// En vez de renderizar los childrens, se renderiza el Outlet (cumple la misma funcion)
