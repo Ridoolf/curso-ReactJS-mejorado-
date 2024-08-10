@@ -2,12 +2,12 @@ export const products = [
 
     {
         id: 1,
-        title: "zapatillas nike airMax",
+        title: "zapatillas nike airMax urbanas",
         description: "estas son las mejores airMax del mercado papaa",
         price: 1000,
         stock: 9,
         img: "https://media2.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-nike-air-max-systm-negra-510010dm9537001-1.jpg",
-        category: "deportivas",
+        category: "urbano",
     },
     {
         id: 2,
@@ -16,11 +16,11 @@ export const products = [
         price: 1000,
         stock: 9,
         img: "https://media2.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-nike-air-max-systm-negra-510010dm9537001-1.jpg",
-        category: "deportivas",
+        category: "urbano",
     },
     {
         id: 3,
-        title: "zapatillas jordan",
+        title: "zapatillas jordan deportivas",
         description: "estas son las mejores airMax del mercado papaa",
         price: 1000,
         stock: 9,
@@ -29,12 +29,12 @@ export const products = [
     },
     {
         id: 4,
-        title: "pantalon adidas",
+        title: "pantalon adidas urbano",
         description: "estas son las mejores airMax del mercado papaa",
         price: 1000,
         stock: 9,
         img: "https://media2.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-nike-air-max-systm-negra-510010dm9537001-1.jpg",
-        category: "deportivas",
+        category: "urbano",
     },
     {
         id: 5,
@@ -47,7 +47,7 @@ export const products = [
     },
     {
         id: 6,
-        title: "Nike air uptempo",
+        title: "Nike air uptempo deportivas",
         description: "estas son las mejores airMax del mercado papaa",
         price: 1000,
         stock: 9,
@@ -56,7 +56,7 @@ export const products = [
     },
     {
         id: 7,
-        title: "zapatillas nike airMax",
+        title: "zapatillas nike airMax deportivas",
         description: "estas son las mejores airMax del mercado papaa",
         price: 1000,
         stock: 9,
@@ -65,12 +65,12 @@ export const products = [
     },
     {
         id: 8,
-        title: "zapatillas nike airMax",
+        title: "zapatillas nike airMax urbanas",
         description: "estas son las mejores airMax del mercado papaa",
         price: 1000,
         stock: 9,
         img: "https://media2.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-nike-air-max-systm-negra-510010dm9537001-1.jpg",
-        category: "deportivas",
+        category: "urbano",
     }
 
 ]
