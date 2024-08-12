@@ -1,10 +1,9 @@
 import "./App.css";
-import "@fontsource/roboto/300.css";
 import { ProductsListContainer } from "./components/pages/productList/ProductsListContainer";
 import { ProductDetailContainer } from "./components/pages/productDetail/ProductDetailContainer";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout/Layout";
+import { Cart } from "./components/pages/cart/Cart";
 // para utilizar react router siempre debemos importar estos 3 componentes
 /*
   . BrowserRouter, Routes: Nos sirve para iniciar el sistema de rutas
@@ -25,6 +24,7 @@ function App() {
           />
           <Route path="/itemDetail/:id" element={<ProductDetailContainer />} />
           <Route path="*" element={<h1>Lo siento, la ruta no existe</h1>} />
+          <Route path="/carrito" element={<Cart />} />
         </Route>
       </Routes>
     </BrowserRouter>

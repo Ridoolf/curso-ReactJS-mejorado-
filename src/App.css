@@ -5,8 +5,8 @@
 }
 
 .app-container{
-    background-color: #1a507c;
+    background-color: red;
     width: 100vw;
     min-height: 100vh;
-    font-family: Roboto;
+    font-family: 'Courier New', Courier, monospace;
 }

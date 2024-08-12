@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Navbar.css";
+import "@fontsource/roboto/300.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 
@@ -19,7 +20,7 @@ export const Navbar = () => {
             alt="logo de la tienda 'Astra'"
           />
           <h2>
-            Astra <br />
+            ASTRA <br />
             <span>Shopping</span>
           </h2>
         </div>
