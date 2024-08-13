@@ -42,15 +42,8 @@
     img{
         transition: .2s;
         cursor: pointer;
-        width: 70px;
+        width: 55px;
         border-radius: 20px;
-    }
-    h2{
-        line-height: 0.7;
-        font-size: 30px;
-        span{
-            font-size: 15px;
-        }
     }
 }
 
@@ -65,7 +58,6 @@
 @media (max-width: 850px) {
     .nav{
         justify-content: space-between;
-        margin-inline: 50px;
     }
     .nav>*{
         width: auto;
@@ -74,13 +66,6 @@
         img{
             width: 55px;
         }
-        h2{
-            font-size: 20px;
-            span{
-                font-size: 10px;
-            }
-        }
-        
     } 
     .nav>ul{
         display: none;

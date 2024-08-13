@@ -5,7 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
-  const [activeItem, setActiveItem] = useState("Tienda");
+  const [activeItem, setActiveItem] = useState("Inicio");
 
   const handleItemClick = (item) => {
     setActiveItem(item);
@@ -19,23 +19,21 @@ export const Navbar = () => {
             src="https://marketplace.canva.com/EAFfTlMRgUE/1/0/1600w/canva-logo-para-tienda-de-ropa-y-accesorios-beige%2C-rosa-y-verde-ScIVINIWL_E.jpg"
             alt="logo de la tienda 'Astra'"
           />
-          <h2>
-            ASTRA <br />
-            <span>Shopping</span>
-          </h2>
         </div>
         <div className="menu_responsive">
           <MenuIcon className="menu_icon" />
         </div>
         <ul className="nav_lista">
-          <li
-            className={`nav_lista_item ${
-              activeItem === "Inicio" ? "actual" : ""
-            }`}
-            onClick={() => handleItemClick("Inicio")}
-          >
-            Inicio
-          </li>
+          <Link to={"/"}>
+            <li
+              className={`nav_lista_item ${
+                activeItem === "Inicio" ? "actual" : ""
+              }`}
+              onClick={() => handleItemClick("Inicio")}
+            >
+              Inicio
+            </li>
+          </Link>
           <Link to={"/productList"}>
             <li
               className={`nav_lista_item ${
@@ -77,15 +75,3 @@ export const Navbar = () => {
     </>
   );
 };
-
-/* Outlet:
-
-  En vez de renderizar los childrens, se renderiza el Outlet (cumple la misma funcion)
-*/
-
-/* Link:
-
-Cumple una funcion similar a la etiqueta href de html, pero la misma no se utiliza en react ya que
-refresca la pagina... Cuando utilizamos rutas, tenemos que importar los links de react router
-
-*/

@@ -4,19 +4,14 @@ import { ProductDetailContainer } from "./components/pages/productDetail/Product
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout/Layout";
 import { Cart } from "./components/pages/cart/Cart";
-// para utilizar react router siempre debemos importar estos 3 componentes
-/*
-  . BrowserRouter, Routes: Nos sirve para iniciar el sistema de rutas
-  . Route: No tiene sistema de cierre por lo que su sentencia es <Route />
-  Y debemos ponerlo dependiendo de cuantas rutas queremos
-*/
+import { Home } from "./components/pages/home/Home";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<h1>Este es el home</h1>} />
+          <Route path="/" element={<Home />} />
           <Route path="/productList" element={<ProductsListContainer />} />
           <Route
             path="/category/:categoryName"
@@ -32,55 +27,3 @@ function App() {
 }
 
 export default App;
-
-/* Estructura del componente (antes):
-    <div className="app-container">
-      <Navbar>
-        <ProductsListContainer />
-        <ProductDetailContainer />
-      </Navbar>
-    </div>
-*/
-
-/* Estructura de rutas basica
-
-    <BrowserRouter>
-      <Routes>
-        <Route />
-        <Route />
-        <Route />
-        <Route />
-      </Routes>
-    </BrowserRouter>
-*/
-
-/*
-  La ruta recibe 2 parametros
-    . path: es la ruta del browser que queremos crear
-      . Si tenemos un componente carrito su ruta seria "/carrito"
-      . Para sentenciar la ruta del home/inicio se pone "/"
-      . Para renderizar un elemento en cualquier ruta que no este configurada
-      colocamos "*" en el path
-*/
-
-/* Layout
-
-Para estructurar nuestra pagina nos creamos un componente layout... el mismo, se va a encargar de esta tarea:
-
-import { Outlet } from "react-router-dom";
-import { Navbar } from "./navbar/Navbar";
-import { Footer } from "./footer/Footer";
-
-export const Layout = () => {
-  return (
-    <div>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </div>
-  );
-};
-
-Entonces nuestro app solo posee las rutas a los componentes, y layout los estructura 
-
-*/
