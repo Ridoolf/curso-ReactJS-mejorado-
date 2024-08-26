@@ -4,25 +4,51 @@ export const Form = () => {
   const [userData, setUserData] = useState({
     name: "",
     lastname: "",
+    email: "",
   });
   // En vez d crear un estado por cada input, creamos un estado que contenga un objeto con los datos del usuario
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // antes de comenzar con la logica del handle es donde se colocan las
+    // validaciones para los campos
+
+    if (!userData.email.includes("@")) {
+      console.log("El campo email no es valido");
+      return;
+    }
+
+    if (userData.name.length <= 3) {
+      console.log("El nombre es muy corto");
+    }
+
     let data = {
       nombreUsuario: userData.name,
       apellidoUsuario: userData.lastname,
+      emailUsuario: userData.email,
     };
     console.log(data);
   };
 
   const handleData = (e) => {
+    {
+      /*
+        Aca tambien podemos colocar validaciones pero hay que tener en cuenta 
+        que cada vez el usuario escriba algo, el handle va a validar el input
+        Por ejemplo, si aca ponemos la validacion de que el name sea mayor a 3 letras,
+        ni bien el usuario ponga la primer letra de su nombre ya va a devolver un
+        error
+      */
+    }
+
     setUserData({ ...userData, [e.target.name]: e.target.value });
     {
       /*
         Ahora, como queremos que esto sea escalable creamos un solo handle que en vez de tener hardcodeada la propiedad
-        que queremos cambiar por nuestro value del input, tomamos el nombre del input y le decimos que, coloque el target.value
-        en el target.name que se este modificando
+        que queremos cambiar por nuestro value del input, tomamos el nombre del input y le decimos que coloque el target.value
+        en el target.name que se este modificando. Es importante destacar que cuando creemos el input en nuestro html, en la
+        propiedad name debemos poner la propiedad que queremos cambiar, ya que nuestro target.name toma ese valor... 
         Por ultimo, realizamos un spread del objeto userData, para que no se modifique de manera erronea el objeto y respete los
         datos del usario anteriormente creados
     */
@@ -43,6 +69,12 @@ export const Form = () => {
           type="text"
           placeholder="Ingrese su apellido"
           name="lastname"
+          onChange={handleData}
+        />
+        <input
+          type="text"
+          placeholder="Ingrese su email"
+          name="email"
           onChange={handleData}
         />
         <button>Enviar</button> {/* Por default es type submit */}

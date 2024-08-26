@@ -34,7 +34,7 @@ export const Navbar = () => {
               Inicio
             </li>
           </Link>
-          <Link to={"/productList"}>
+          <Link to={"/products"}>
             <li
               className={`nav_lista_item ${
                 activeItem === "Tienda" ? "actual" : ""
