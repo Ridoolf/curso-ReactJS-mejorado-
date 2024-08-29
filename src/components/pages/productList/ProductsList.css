@@ -7,6 +7,14 @@
     gap: 30px;
 }
 
+.filter_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 50px;
+    margin-bottom: 45px;
+}
+
 .filter{
     display: flex;
     text-decoration: none;
@@ -14,7 +22,7 @@
     margin: 20px;
     list-style: none;
     li{
-        padding: 8px;
+        padding: 8px 15px;
         border-radius: 20px;
         background-color: #1a507c;
         text-transform: uppercase;

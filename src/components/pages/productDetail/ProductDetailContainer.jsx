@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProductDetail } from "./ProductDetail";
 import { products } from "../../../productsMock";
 import { useParams } from "react-router-dom";
+import { CartContext } from "../../../context/CartContext";
 
 export const ProductDetailContainer = () => {
   const [productSelected, setProductSelected] = useState({});
+  const { addToCart } = useContext(CartContext);
 
   const { id } = useParams();
 
@@ -20,5 +22,7 @@ export const ProductDetailContainer = () => {
       .catch((err) => console.log("err: ", err));
   }, [id]);
 
-  return <ProductDetail productSelected={productSelected} />;
+  return (
+    <ProductDetail productSelected={productSelected} addToCart={addToCart} />
+  );
 };

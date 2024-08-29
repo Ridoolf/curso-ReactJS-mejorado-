@@ -1,11 +1,12 @@
 import { useCount } from "../../hooks/useCount";
+import "./ItemCount.css";
 
 export const ItemCount = ({ initial, stock, onAdd }) => {
   const { count, decrement, increment } = useCount(initial, stock);
 
   return (
     <>
-      <div>
+      <div className="item_count_container">
         <button onClick={decrement}>-</button>
         <span>{count}</span>
         <button onClick={increment}>+</button>

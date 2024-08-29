@@ -1,0 +1,14 @@
+.product_detail_container{
+    margin: 40px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #0f0f0f;
+    border-radius: 25px;
+    h3{
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+    img{
+        width: 300px;
+    }
+}

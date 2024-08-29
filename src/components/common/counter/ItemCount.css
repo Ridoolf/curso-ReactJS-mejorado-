@@ -1,0 +1,11 @@
+.item_count_container{
+    button{
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        background-color: #1a507c;
+        color: #fafafa;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
