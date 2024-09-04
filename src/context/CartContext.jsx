@@ -23,10 +23,10 @@ export const CartContextProvider = ({ children }) => {
       let newArray = cart.map((prod) => {
         // cuando encontremos el producto
         if (prod.id === newProduct.id) {
-          // retornamos ese mismo prod pero sumamos las cantidades
+          // retornamos ese mismo producto con la cantidad que el usuario pide
           return {
             ...prod,
-            quantity: prod.quantity + newProduct.quantity,
+            quantity: newProduct.quantity,
           };
         } else {
           // hasta que nuestro mapeo encuentre el producto retornamos
@@ -47,9 +47,27 @@ export const CartContextProvider = ({ children }) => {
     return exist;
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
+
+  const deleteProdByID = (id) => {
+    const newArray = cart.filter((prod) => prod.id !== id);
+    setCart(newArray);
+  };
+
+  const getTotalQuantityByID = (id) => {
+    let product = cart.find((e) => e.id === id);
+    return product?.quantity; // --> A este operador se lo conoce como optional chaining y sirve para
+    // que la funcion no nos devuelva un error si llega a suceder que la propiedad quantity es undefined
+  };
+
   let data = {
     cart,
     addToCart,
+    clearCart,
+    deleteProdByID,
+    getTotalQuantityByID,
   };
 
   return <CartContext.Provider value={data}> {children} </CartContext.Provider>;

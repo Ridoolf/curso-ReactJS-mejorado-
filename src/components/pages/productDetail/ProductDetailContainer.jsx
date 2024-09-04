@@ -6,9 +6,11 @@ import { CartContext } from "../../../context/CartContext";
 
 export const ProductDetailContainer = () => {
   const [productSelected, setProductSelected] = useState({});
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, getTotalQuantityByID } = useContext(CartContext);
 
   const { id } = useParams();
+
+  const prodQuantity = getTotalQuantityByID(+id);
 
   useEffect(() => {
     let productFind = products.find((product) => product.id === +id);
@@ -23,6 +25,10 @@ export const ProductDetailContainer = () => {
   }, [id]);
 
   return (
-    <ProductDetail productSelected={productSelected} addToCart={addToCart} />
+    <ProductDetail
+      productSelected={productSelected}
+      addToCart={addToCart}
+      prodQuantity={prodQuantity}
+    />
   );
 };
