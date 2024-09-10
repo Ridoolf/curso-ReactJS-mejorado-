@@ -3,22 +3,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 export const FormFormik = () => {
-  // tanto handleSubmit, handleChange, initialValues y onSubmit son propiedades de formik
-
-  /*
-    handleSubmit: funcion que nos retorna formik para asignarle a nuestro form
-    
-    onSubmit: cuando consumimos el useFormik nos pide initialValues y onSubmit, este, es la 
-    funcion que queremos ejecutar cuando nuestro form se envie, osea, cuando ejecute nuestro 
-    handleSubmit... aqui iria la conexion con el back ej
-
-    handleChange: funcion que nos retorna formik para asignarle a cada imput
-
-    initialValues: son los valores iniciales de nuestros inputs, que, cuando se ejecuta la funcion 
-    handleChange, asigna el valor de cada input a las propiedades, en este caso, nombre / email / telefono
-
-  */
-
   const { handleSubmit, handleChange, errors } = useFormik({
     initialValues: {
       nombre: "",
