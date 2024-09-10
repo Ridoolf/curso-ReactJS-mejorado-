@@ -1,7 +1,7 @@
 export const menuFilter = [
     {
         id: "Todo",
-        path: "/productList",
+        path: "/products",
     },
     {
         id: "Urbano",
