@@ -30,10 +30,12 @@ export const Cart = () => {
     <div className="cart_container">
       <h1>CARRITO</h1>
 
-      <button className="clear_cart" onClick={limpiar}>
-        <CleaningServices className="cleaning_icon" />
-        Limpiar Carrito
-      </button>
+      {cart.length > 0 && (
+        <button className="clear_cart" onClick={limpiar}>
+          <CleaningServices className="cleaning_icon" />
+          Limpiar Carrito
+        </button>
+      )}
       {cart.map((prod) => {
         return (
           <div key={prod.id} className="item_cart_container">
