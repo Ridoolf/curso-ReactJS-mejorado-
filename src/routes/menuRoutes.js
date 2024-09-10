@@ -1,5 +1,6 @@
 import { Cart } from "../components/pages/cart/Cart"
 import { Form } from "../components/pages/form/Form"
+import { FormFormik } from "../components/pages/formFormik/FormFormik"
 import { Home } from "../components/pages/home/Home"
 import { ProductDetailContainer } from "../components/pages/productDetail/ProductDetailContainer"
 import { ProductsListContainer } from "../components/pages/productList/ProductsListContainer"
@@ -34,5 +35,10 @@ export const menuRoutes = [
         id:"form",
         path: "/form",
         Element: Form
+    },
+    {
+        id:"formik",
+        path: "/formik",
+        Element: FormFormik
     }
 ]
